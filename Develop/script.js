@@ -14,8 +14,6 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword); 
 
-let characterArray = "!@#$%^&*()";
-
 function generatePassword() {
   let passwordLength = prompt("Enter number of characters for your password.");
   if (passwordLength < 8) {
@@ -24,11 +22,8 @@ function generatePassword() {
   } else if (passwordLength > 128) {
     alert("Password must be at most 128 characters long.");
     return undefined;
-  } else {
-    function generatePassword() {
-      let passwordLength = prompt("Enter number of characters for your password.");
-    }
-  }
+  } 
+  
   let numeric = confirm("Do you want numeric characters?");
   let alphaLower = confirm("Do you want lowercase letters?");
   let alphaUpper = confirm("Do you want uppercase letters?");
@@ -37,50 +32,54 @@ function generatePassword() {
   if (numeric == false && alphaLower == false && alphaUpper == false && specialChar == false) {
     alert("You must select at least one character.");
   } 
-   let stringArray = {
-      numericString: function() {
-        return String.fromCharCode(Math.floor(Math.random() * 10) +1);
-      },
-      lowercaseString: function() {
-        return String.fromCharCode(Math.random(String.fromCharCode() * 26 + 97));
-      },
-      uppercaseString: function() {
-        return String.fromCharCode(Math.random(String.fromCharCode() * 26 + 65));
-      },
-      specialCharString: function() {
-        return characterArray[(Math.random() * characterArray.length)];
-      }
-   };
-    let numericMinimum = "";
-    let lowercaseMinimum = "";
-    let uppercaseMinimum = "";
-    let specialCharMinimum = "";
+    let randomPassword = "";
+    let numericArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    let alphaLowerArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    let alphaUpperArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    let specialCharArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+    
 
-   if (numeric === true) {
-     numericMinimum = stringArray.numericString();
-   }
-   if (alphaLower === true) {
-     lowercaseMinimum = stringArray.lowercaseString();
-   }
-   if (alphaUpper === true) {
-     uppercaseMinimum = stringArray.uppercaseString();
-   }
-   if (specialChar === true) {
-     specialCharMinimum = stringArray.specialCharString();
-   }
+
+    // Generator functions
+    
+    function getRandomNumeric() {
+      return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+    }
+    function getRandomLower() {
+      return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+    }
+    function getRandomUpper() {
+      return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+    }
+    function getRandomSpecial() {
+      const special = '!@#$%^&*()'
+      return special[Math.floor(Math.random() * special.length)];
+    }
+  
+    
+    // for (let i = 0; i < numericArr.length; i++) {
+    //   const numRandom = numericArr[Math.floor(Math.random() * numericArr.length)];
+    // }
+    // for (let i = 0; i < alphaLowerArr.length; i++) {
+    //   const lowerRandom = alphaLowerArr[Math.floor(Math.random() * alphaLowerArr.length)];
+    // }
+    // for (let i = 0; i < alphaUpperArr.length; i++) {
+    //   const upperRandom = alphaUpperArr[Math.floor(Math.random() * alphaUpperArr.length)];
+    // }
+    // for (let i = 0; i < specialCharArr.length; i++) {
+    //   const specialRandom = specialCharArr[Math.floor(Math.random() * specialCharArr.length)];
+    // }
+
+    
+
+    // for (let i = 0; i < passwordLength.length; i++) {
+    //   combinedArr[Math.floor(Math.random() * passwordLength.length)];
+    // }
+    // randomPassword += combinedArr
+
+    return randomPassword
+    }
+
+  
    
-    let randomPassword = "";    
-      
-    for (let i = 0; i < passwordLength; i++) {
-      let randomNumberPicked = Math.floor(Math.random() * passwordLength);
-
-    randomPassword += randomNumberPicked;
-   }
-
-    randomPassword += numericMinimum;
-    randomPassword += lowercaseMinimum;
-    randomPassword += uppercaseMinimum;
-    randomPassword += specialCharMinimum;
-
-   return randomPassword;
-  }
+  
