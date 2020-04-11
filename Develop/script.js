@@ -69,8 +69,4 @@ function generatePassword() {
         combinedArr.push(specialRandom);
       }
     }
-    
-       
-      
-        
-   
+}
