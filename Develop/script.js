@@ -34,6 +34,7 @@ function generatePassword() {
 // A way to ensure user selects at least one character  
   if (numeric == false && alphaLower == false && alphaUpper == false && specialChar == false) {
     alert("You must select at least one character.");
+    return undefined;
   }
 
   // Arrays to get characters to use in password.  
@@ -69,4 +70,14 @@ function generatePassword() {
         combinedArr.push(specialRandom);
       }
     }
-}
+
+    randomPassword = "";
+
+    // For loop to get concatonated random password.
+    for (let i = 0; i < (parseInt(passwordLength)); i++) {
+      let random = combinedArr[Math.floor(Math.random() * combinedArr.length)];
+      randomPassword += random;
+      }
+    // Return of random password to screen for end user.
+    return randomPassword  
+    }
