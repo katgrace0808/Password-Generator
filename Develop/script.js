@@ -35,59 +35,52 @@ function generatePassword() {
   if (numeric == false && alphaLower == false && alphaUpper == false && specialChar == false) {
     alert("You must select at least one character.");
   }
-  // The start of the random password string.
-    let randomPassword = "";
+
   // Arrays to get characters to use in password.  
     let numericArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     let alphaLowerArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     let alphaUpperArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     let specialCharArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
     let combinedArr = [];
-   
-  
+     
     // For loops to get random characters from each array.
     
-    
-    
-    // // For loop to get concatonated random password.
-
-    // for (let i = 0; i < passwordLength.length; i++) {
-    //   combinedArr[Math.floor(Math.random() * passwordLength.length)];
-    // }
-    // randomPassword += combinedArr
-
-    // Return of random password to screen for end user.
-
-   
-
-    if (numeric == true) {
+    if (numeric === true) {
       for (let i = 0; i < numericArr.length; i++) {
         const numRandom = numericArr[Math.floor(Math.random() * numericArr.length)];
         combinedArr.push(numRandom);
       }
     }
-    if (alphaLower == true) {
+    if (alphaLower === true) {
       for (let i = 0; i < alphaLowerArr.length; i++) {
         const lowerRandom = alphaLowerArr[Math.floor(Math.random() * alphaLowerArr.length)];
         combinedArr.push(lowerRandom);
       }
     }
-    if (alphaUpper == true) {
+    if (alphaUpper === true) {
       for (let i = 0; i < alphaUpperArr.length; i++) {
         const upperRandom = alphaUpperArr[Math.floor(Math.random() * alphaUpperArr.length)];
         combinedArr.push(upperRandom);
       }
     }
-    if (specialChar == true) {
+    if (specialChar === true) {
       for (let i = 0; i < specialCharArr.length; i++) {
         const specialRandom = specialCharArr[Math.floor(Math.random() * specialCharArr.length)];
         combinedArr.push(specialRandom);
       }
     }
-    console.log(combinedArr);
-    return randomPassword
-    }
+    // The start of the random password string.
+    let randomPassword = "";
 
-  
+    // For loop to get concatonated random password.
+    for (let i = 0; i < (parseInt(passwordLength)); i++) {
+      let random = combinedArr[Math.floor(Math.random() * combinedArr.length)];
+      randomPassword += random;
+      }
+    // Return of random password to screen for end user.
+    return randomPassword  
+    }
+       
+      
+        
    
-  
