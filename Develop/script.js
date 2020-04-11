@@ -69,17 +69,7 @@ function generatePassword() {
         combinedArr.push(specialRandom);
       }
     }
-    // The start of the random password string.
-    let randomPassword = "";
-
-    // For loop to get concatonated random password.
-    for (let i = 0; i < (parseInt(passwordLength)); i++) {
-      let random = combinedArr[Math.floor(Math.random() * combinedArr.length)];
-      randomPassword += random;
-      }
-    // Return of random password to screen for end user.
-    return randomPassword  
-    }
+    
        
       
         
