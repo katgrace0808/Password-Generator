@@ -12,15 +12,15 @@ where the application will print the password after all of the user input is rec
 After clicking the Generate Password button, the user is asked a series of input questions.  Here are the questions followed by how the user would respond:
 
 1. Enter number of characters for your password.
-    a. User inputs a number.
+    User inputs a number.
 2. Do you want numeric characters?
-    b. User selects OK for yes, Cancel for no.
+    User selects OK for yes, Cancel for no.
 3. Do you want lowercase letters?
-    b. User selects OK for yes, Cancel for no.
+    User selects OK for yes, Cancel for no.
 4. Do you want uppercase letters?
-    b. User selects OK for yes, Cancel for no.
+    User selects OK for yes, Cancel for no.
 5. Do you want special characters?
-    b. User selects OK for yes, Cancel for no.
+    User selects OK for yes, Cancel for no.
 
 For the first input prompt, in order to move on to the first question, the user must
 enter a number that is at least eight and at most 128.  If the user selecs any number outside of that range, they will be alerted why and they must begin again.  
