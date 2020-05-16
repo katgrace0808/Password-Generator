@@ -36,3 +36,5 @@ This is my first application created, which is part of the coding bootcamp cours
 The development of creating the actual randomized password was very difficult, and I was presented with many challenges along the way. I chose to create arrays of characters for each category instead of using Unicode.  I watched a developer on YouTube create arrays using Unicode, and while it was interesting, I found it simpler to use arrays that listed each available character and see the list.
 
 The other main difficulty I experienced was creating the for loop that randomized the password.  I worked with a study group of fellow students as well as a tutor to understand their relation to the arrays, and was ultimately able to get a randomized password to be created.
+
+![Screenshot of deployed site](https://github.com/katgrace0808/Password-Generator/blob/master/Assets/Screenshot.PNG)
