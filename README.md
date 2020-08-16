@@ -23,7 +23,7 @@ After clicking the Generate Password button, the user is asked a series of input
     User selects OK for yes, Cancel for no.
 
 For the first input prompt, in order to move on to the first question, the user must
-enter a number that is at least eight and at most 128.  If the user selecs any number outside of that range, they will be alerted why and they must begin again.  
+enter a number that is at least eight and at most 128.  If the user selects any number outside of that range, they will be alerted why and they must begin again.  
 
 For the four questions, a user must select at least one of the choices.  If Cancel is selected for all four questions, the user receives an alert and they must begin again.
 
